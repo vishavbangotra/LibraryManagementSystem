@@ -1,6 +1,6 @@
 from dataclasses import field
 from django.contrib.auth.models import User, Group
-from .models import Book
+from .models import Book, Student
 from rest_framework.serializers import ModelSerializer
 
 
@@ -11,6 +11,5 @@ class BookSerializer(ModelSerializer):
 
 class StudentSerializer(ModelSerializer):
     class Meta:
-        model = Book
+        model = Student
         fields = '__all__'
-
